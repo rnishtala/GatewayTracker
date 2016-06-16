@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to Gateway tracker
+
+    // Wrapper
+    #wrapper
+
+        // GATEWAY INFO
+        #gatewayInfo
+            h2 Gateway Info
+            p
+                strong GatewayName:
+                |  <span id='gatewayInfoName'></span>
+                br
+                strong Service type:
+                |  <span id='serviceInfoType'></span>
+                br
+                strong FrequencyBand:
+                |  <span id='freqInfoBand'></span>
+                br
+                strong Location:
+                |  <span id='gatewayInfoLocation'></span>
+        // /GATEWAY INFO
+
+        // GATEWAY LIST
+        h2 Gateway List
+        #gatewayList
+            table
+                thead
+                    th GatewayName
+                    th Contact
+                    th Delete?
+                tbody
+        // /GATEWAY LIST
+        
+        // ADD GATEWAY
+        h2 Add GatewayName
+        #addGateway
+            fieldset
+                input#inputGatewayName(type='text', placeholder='Gatewayname')
+                input#inputGatewayContact(type='text', placeholder='Email')
+                br
+                input#inputGatewayService(type='text', placeholder='Service(BB/WB)')
+                input#inputGatewayFreq(type='text', placeholder='FrequencyBand(Ka/Ku)')
+                br
+                input#inputGatewayLocation(type='text', placeholder='Location')
+                input#inputGatewayBeam(type='text', placeholder='Beam Name')
+                br
+                button#btnAddGateway Add Gateway
+        //  /ADD GATEWAY
+    // /WRAPPER
